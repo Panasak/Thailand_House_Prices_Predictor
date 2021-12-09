@@ -7,4 +7,4 @@ Created on Thu Dec  9 08:38:35 2021
 import pandas as pd
 import numpy as np
 
-pd.read_csv('thai_housing_price_data_cleaned.csv')
+pd.read_csv('t')
