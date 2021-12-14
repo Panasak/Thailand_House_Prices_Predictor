@@ -13,6 +13,22 @@ This project uses multiple linear regression to predict the house prices in Thai
 * **Flask Productization:** https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
 ## Web Scraping
 Tweaked the web scraper from the article above to scrape 2400 house postings from baan.kaidee.com. With each job, we got the following:
-*
+* House Listing Titles
+* House Listing Descriptions
+* Addresses
+* Areas in Square Yard
+* Number of Bedrooms
+* Number of Bathrooms
+* Prices
+* Listing Dates
+* Status (New or Second Hand)
+## Data Cleaning
+After scraping the data. I needed to clean it up so that it was usable for our model. I made the followinng changes and created the following variables:
+* Parsed numeric data out of prices
+* Made columns for subdistricts, districts, and provinces
+* Removed rows without bedrooms or bathrooms
+* Transformed listing datas or numerical value
+* Made columns for it different keywords were listed in the descriptions:
+..* test
 
 
