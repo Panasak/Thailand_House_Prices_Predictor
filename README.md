@@ -29,6 +29,36 @@ After scraping the data. I needed to clean it up so that it was usable for our m
 * Removed rows without bedrooms or bathrooms
 * Transformed listing datas or numerical value
 * Made columns for it different keywords were listed in the descriptions:
-..* test
+  * school
+  * univeristy
+  * airport
+  * city
+  * housing estate
+  * view
+* Made a columns for titles and descriptions lengths
+## EDA
+I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
+
+![alt text](https://github.com/Panasak/Thailand_House_Prices_Predictor/blob/main/data_clean/sactter_plot.png)
+![alt text](https://github.com/Panasak/Thailand_House_Prices_Predictor/blob/main/data_clean/heat_plot.png)
+![alt text](https://github.com/Panasak/Thailand_House_Prices_Predictor/blob/main/data_clean/box_plot.png)
+![alt text](https://github.com/Panasak/Thailand_House_Prices_Predictor/blob/main/data_clean/bar_plot.png)
+## Model Building
+First I transformed the categorical variables into dummy variables. I also split the data into train and test sets with a test size of 33%
+I tired three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers arn't particularly bad in for this type of model.
+I tried three different models:
+* **Multiple Linear Regression** - Baseline for the model
+* **Lasso Regression** - Because of the sparse data from the many categorical variables. I thought a normalized regression like lasso would be effective
+* **Random Forest** - Again, with the sparsity associated with the data, I thought that this would be a good fit
+## Model Performance
+The Random Forest model outperformed the other approaches on the test and validation sets
+* **Random Forest:** MAE = 4411561.95
+* **Linear Regression:** MAE = 441239550501459.25
+* **Lasso Regression:** MAE = 6423036.02
+## Productization
+In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values for a house listing and return an estimated price.
+
+
+
 
 
