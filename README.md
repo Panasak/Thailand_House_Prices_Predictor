@@ -45,7 +45,7 @@ I looked at the distributions of the data and the value counts for the various c
 ![alt text](https://github.com/Panasak/Thailand_House_Prices_Predictor/blob/main/data_clean/bar_plot.png)
 ## Model Building
 First I transformed the categorical variables into dummy variables. I also split the data into train and test sets with a test size of 33%
-I tired three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers arn't particularly bad in for this type of model.
+I tired three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren't particularly bad in for this type of model.
 I tried three different models:
 * **Multiple Linear Regression** - Baseline for the model
 * **Lasso Regression** - Because of the sparse data from the many categorical variables. I thought a normalized regression like lasso would be effective
